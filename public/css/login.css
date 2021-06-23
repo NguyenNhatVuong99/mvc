@@ -1,0 +1,211 @@
+.login-block {
+  background: #034694;
+  background: linear-gradient(0deg, #034694 0%, white 100%);
+  float: left;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.login-block .banner-sec {
+  background-size: cover;
+  min-height: 500px;
+  border-radius: 0 10px 10px 0;
+  padding: 0;
+}
+
+.login-block .container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login-block .carousel-inner {
+  height: 500px;
+  border-radius: 0 10px 10px 0;
+}
+
+.login-block .carousel-inner img {
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px !important;
+  width: 100% !important;
+}
+
+.login-block .carousel-caption {
+  text-align: left;
+  left: 5%;
+}
+
+.login-block .login-sec {
+  padding: 50px 30px;
+  position: relative;
+}
+
+.login-block .login-sec input {
+  height: 47px;
+  border-radius: 20px;
+}
+
+.login-block .login-sec input[type=text] {
+  padding: 20px;
+}
+
+.login-block .login-sec input[type=password] {
+  padding: 20px;
+}
+
+.login-block .login-sec input::-moz-placeholder {
+  /* Firefox 19+ */
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.login-block .login-sec a {
+  color: #002a8f;
+}
+
+.login-block .login-sec a:hover {
+  color: #00b5f5;
+}
+
+.login-block .login-sec .social-container {
+  position: absolute;
+  width: 80%;
+  bottom: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.login-block .login-sec .social-container .social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+
+.login-block .login-sec .social-container .social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.login-block .login-sec .social-container .social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  transition: all 265ms ease-out;
+  font-size: 1.5rem;
+}
+
+.login-block .login-sec .social-container .social-icons a {
+  display: inline-block;
+}
+
+.login-block .login-sec .social-container .social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00b5f5, #002a8f);
+  transition: all 265ms ease-out;
+}
+
+.login-block .login-sec .social-container .social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.login-block .login-sec .social-container .social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00b5f5;
+  background: -webkit-linear-gradient(45deg, #00b5f5, #002a8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+.login-block .login-sec h2 {
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #002a8f;
+}
+
+.login-block .login-sec h2:after {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  background: #00b5f5;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+
+.login-block .login-sec .btn-login {
+  overflow: hidden;
+  position: relative;
+  border-radius: 30PX;
+  background: -webkit-linear-gradient(45deg, #00b5f5, #002a8f);
+}
+
+.login-block .login-sec .btn-login span {
+  z-index: 20;
+}
+
+.login-block .login-sec .btn-login:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.2;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.login-block .login-sec .btn-login:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.login-block .banner-text {
+  width: 70%;
+  position: absolute;
+  bottom: 40px;
+  padding-left: 20px;
+}
+
+.login-block .banner-text h2 {
+  color: #fff;
+  font-weight: 600;
+}
+
+.login-block .banner-text h2:after {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  background: #fff;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
+.login-block .banner-text p {
+  color: #fff;
+}
+

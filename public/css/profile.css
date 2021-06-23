@@ -1,0 +1,374 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext);@import url(https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto);html {
+  position: relative;
+  overflow-x: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  color: #324e63;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.wrapper {
+  width: 100%;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 50px 20px;
+  padding-top: 100px;
+  display: flex;
+  background: linear-gradient(0deg, #034694 0%, white 100%);
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 100px;
+  }
+}
+
+.profile-card {
+  width: 100%;
+  min-height: 460px;
+  margin: auto;
+  box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+  background: #fff;
+  border-radius: 12px;
+  max-width: 700px;
+  position: relative;
+}
+
+.profile-card.active .profile-card__cnt {
+  filter: blur(6px);
+}
+
+.profile-card.active .profile-card-message,
+.profile-card.active .profile-card__overlay {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+
+.profile-card.active .profile-card-form {
+  transform: none;
+  transition-delay: 0.1s;
+}
+
+.profile-card__img {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+}
+
+@media screen and (max-width: 576px) {
+  .profile-card__img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.profile-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-card__cnt {
+  margin-top: -60px;
+  padding: 0 20px;
+  padding-bottom: 40px;
+  transition: all 0.3s;
+}
+
+.profile-card__name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: #034694;
+  margin-bottom: 10px;
+}
+
+.profile-card__txt {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #324e63;
+  margin-bottom: 15px;
+}
+
+.profile-card__txt strong {
+  font-weight: 700;
+}
+
+.profile-card-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .profile-card-ctr {
+    flex-wrap: wrap;
+  }
+}
+
+.profile-card__button {
+  background: none;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  margin: 15px 35px;
+  padding: 15px 40px;
+  min-width: 201px;
+  border-radius: 50px;
+  min-height: 55px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-card__button {
+    min-width: 170px;
+    margin: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile-card__button {
+    min-width: inherit;
+    margin: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .profile-card__button:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile-card__button:focus {
+  outline: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-card__button:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.profile-card__button:first-child {
+  margin-left: 0;
+}
+
+.profile-card__button:last-child {
+  margin-right: 0;
+}
+
+.profile-card__button.button--blue {
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.4);
+}
+
+.profile-card__button.button--blue:hover {
+  box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+}
+
+.profile-card__button.button--orange {
+  background: linear-gradient(45deg, #d5135a, #f05924);
+  box-shadow: 0px 4px 30px rgba(223, 45, 70, 0.35);
+}
+
+.profile-card__button.button--orange:hover {
+  box-shadow: 0px 7px 30px rgba(223, 45, 70, 0.75);
+}
+
+.profile-card__button.button--gray {
+  box-shadow: none;
+  background: #dcdcdc;
+  color: #142029;
+}
+
+.profile-card-message {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.profile-card-loc {
+  background: #FFFFFF;
+  height: 420px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5%;
+  box-shadow: 2px 5px 20px rgba(51, 51, 51, 0.5);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.profile-card-loc .leftbox {
+  text-align: center;
+  float: left;
+  top: -5%;
+  left: 5%;
+  position: absolute;
+  width: 15%;
+  height: 110%;
+  background: #446ad8;
+  box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.5);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.profile-card-loc .leftbox nav a {
+  list-style: none;
+  padding: 35px;
+  color: #aec4dd;
+  font-size: 1.1em;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-card-loc .leftbox nav a:hover {
+  color: #FFFFFF;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.profile-card-loc .leftbox nav a:first-child {
+  margin-top: 7px;
+}
+
+.profile-card-loc .rightbox {
+  float: right;
+  width: 70%;
+  height: 100%;
+}
+
+.profile-card-loc .profile,
+.profile-card-loc .payment,
+.profile-card-loc .personel,
+.profile-card-loc .privacy,
+.profile-card-loc .settings {
+  transition: opacity 0.5s ease-in;
+  position: absolute;
+  width: 70%;
+}
+
+.profile-card-loc h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #034694;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-card-loc h2 {
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  width: 80%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-left: 2px;
+}
+
+.profile-card-loc p {
+  border-width: 2px;
+  border-style: solid;
+  -o-border-image: linear-gradient(to right, #FFFFFF, rgba(3, 70, 148, 0.5)) 1 0%;
+     border-image: linear-gradient(to right, #FFFFFF, rgba(3, 70, 148, 0.5)) 1 0%;
+  border-top: 0;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  padding: 7px 0;
+  color: #070707;
+}
+
+.profile-card-loc span {
+  font-size: 0.5em;
+  color: #333;
+}
+
+.profile-card-loc .btn {
+  float: right;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  border: none;
+  color: #3FB6A8;
+}
+
+.profile-card-loc .btn:hover {
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+.profile-card-loc input {
+  border: 1px solid #999999;
+  font-family: "Roboto", sans-serif;
+  padding: 2px;
+  margin: 0;
+}
+
+.profile-card-loc .privacy h2 {
+  margin-top: 25px;
+}
+
+.profile-card-loc .personel h2 {
+  margin-top: 25px;
+}
+
+.profile-card-loc .settings h2 {
+  margin-top: 25px;
+}
+
+.profile-card-loc .noshow {
+  opacity: 0;
+  display: none;
+}
+
+.active {
+  color: #3FB6A8;
+}
+

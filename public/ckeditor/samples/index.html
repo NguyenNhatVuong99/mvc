@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: #333;}
+
+.gp-header{font-family: georgia; font-size: 40px; color: #0066FF; font-style: italic; text-align: center; margin-top: 25px;}
+.gp-footer{position: fixed; color: #0066FF ; bottom: 10px; left: 50%; font-family: georgia; font-style: italic; transform: translateX(-50%);}
+.gp-footer .soc_icons{display: inline-block; color: #0066FF; margin: 0px 10px;}
+
+
+::-moz-selection { background: transparent;}
+::selection {background: transparent;}
+
+
+
+.switchContainer{display: inline-block;filter: url("index.html#gooey");-webkit-filter: url("#gooey");position: absolute;left:50%;top:50%; cursor: pointer; transform: translate(-50%, -50%) scale(2);}
+.switchBg{width:40px;height: 7px;}
+.switchBtn{width: 22px;height: 20px;border-radius: 50%; display: inline-block; position: absolute; left: 0px; top: -6px; transform: translate3d(0,0,0);}
+
+.switchBg, .switchBtn{background: #fff; transition: 300ms all ease;}
+.switchContainer.switchOn .switchBtn, .switchContainer.switchOn .switchBg{background: #0066FF;}
+
+.switchContainer.switchOn .switchBtn{animation: switchOn 250ms linear forwards; }
+.switchContainer.switchOff .switchBtn{animation: switchOff 250ms linear forwards; }
+@keyframes switchOn { 
+  0%{transform: scale3d(1,1,1) translate3d(0px,0,0); transform-origin: left center;} 
+  40%{transform: scale3d(1.4,0.7,0) translate3d(8px,0,0); transform-origin: right center;}
+  70%{transform: scale3d(0.9,1.15,1) translate3d(14px,0,0); }
+  100%{transform: scale3d(1,1,1) translate3d(20px,0,0); }
+}
+@keyframes switchOff { 
+  0%{transform: scale3d(1,1,1) translate3d(20px,0,0); transform-origin: right center;} 
+  40%{transform: scale3d(1.4,0.7,0) translate3d(10px,0,0); transform-origin: right center;}
+  70%{transform: scale3d(0.9,1.15,1) translate3d(-3px,0,0); }
+  100%{transform: scale3d(1,1,1) translate3d(0px,0,0); }
+}
+    </style>
+</head>
+<body>
+    
+
+<div class="switchContainer" id="switchContainer">
+    <div class="switchBg"></div>
+      <div class="switchBtn"></div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      </filter>
+    </defs>
+  </svg>
+  
+  
+  <div class="gp-footer">
+    Follow me on : 
+    <a href="facebook.com/gowriprasanthvm" class="soc_icons" target="_blank">facebook</a> /
+    <a href="https://twitter.com/gowriprasanthvm" class="soc_icons" target="_blank">twitter</a>
+  </div>
+  <script>
+      var container = document.querySelector("#switchContainer");
+                
+                function onOffSwitch(){
+                  if(container.classList.contains("switchOn")){
+                    container.classList.remove("switchOn");
+                    container.classList += " switchOff";
+                  }
+                  else{
+                    container.classList.remove("switchOff");
+                    container.classList += " switchOn";
+                  }
+                }
+                container.addEventListener("click", onOffSwitch, false);
+  </script>
+</body>
+</html>
